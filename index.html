@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>API Hackathon</title>
   <link rel="stylesheet" href="./styles.css">
+  <link href="https://fonts.googleapis.com/css2?family=Balsamiq+Sans&display=swap" rel="stylesheet">
 </head>
 <body>
   <div class="header">
@@ -13,7 +14,7 @@
     </header>
   </div>
   <div id="city" class="center margin-bottom-50 width-100">
-    <h2>Enter a city:</h2>
+    <h2 class="margin-top skyblue">Enter a city</h2>
   </div>
   <div id="textbox" class="center margin-bottom-50 width-100">
     <input type="text" id="text" class="textbox" name="textbox" placeholder="Irvine">
@@ -22,8 +23,12 @@
     <button type="submit" class="submit p-grow-30" name="submit"><b>Submit</b></button>
   </div>
   <div class="flex">
-    <h2 id="current-temp" class="hidden">Current temp:</h2>
-    <h2 id="temp" class="pad-left hidden">92</h2>
+    <h2 id="current-temp" class="skyblue hidden">Current Temperature:</h2>
+    <h2 id="temp" class="skyblue pad-left hidden"></h2>
+  </div>
+  <div class="flex">
+    <h2 id="feels-like" class="skyblue hidden">Feels Like:</h2>
+    <h2 id="feels-temp" class="skyblue pad-left hidden"></h2>
   </div>
   <div id="gif" class="gif hidden">
 
