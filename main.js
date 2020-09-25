@@ -6,6 +6,8 @@ var city = document.getElementById('city');
 var cityName = document.createElement('h2');
 var currentTemp = document.getElementById('current-temp');
 var temp = document.getElementById('temp');
+var feelsLike = document.getElementById('feels-like');
+var feelsTemp = document.getElementById('feels-temp');
 var gifBox = document.getElementById('gif');
 var gif = document.createElement('img');
 
@@ -27,13 +29,16 @@ function submitHandleClick() {
       submitButton.classList.add('hidden');
       currentTemp.classList.remove('hidden');
       temp.classList.remove('hidden');
-      temp.textContent = data["main"]["temp"];
+      feelsLike.classList.remove('hidden');
+      feelsTemp.classList.remove('hidden');
+      temp.textContent = data["main"]["temp"] + "°F";
+      feelsTemp.textContent = data["main"]["feels_like"] + "°F";
       gifBox.classList.remove('hidden');
       goBackButton.classList.remove('hidden');
       cityName.textContent = text.value;
       cityName.classList.add('p-grow-30');
       textBox.append(cityName);
-      if (temp.textContent < 32) {
+      if (data["main"]["temp"] < 32) {
         $.ajax({
           url: "http://api.giphy.com/v1/gifs/search",
           method: "GET",
@@ -51,7 +56,7 @@ function submitHandleClick() {
           }
         })
       }
-      if (temp.textContent < 50 && temp.textContent > 32) {
+      if (data["main"]["temp"] <= 50 && data["main"]["temp"] >= 32) {
         $.ajax({
           url: "http://api.giphy.com/v1/gifs/search",
           method: "GET",
@@ -69,7 +74,7 @@ function submitHandleClick() {
           }
         })
       }
-      if (temp.textContent < 70 && temp.textContent > 50) {
+      if (data["main"]["temp"] <= 70 && data["main"]["temp"] >= 50) {
         $.ajax({
           url: "http://api.giphy.com/v1/gifs/search",
           method: "GET",
@@ -87,7 +92,7 @@ function submitHandleClick() {
           }
         })
       }
-      if (temp.textContent < 80 && temp.textContent > 70) {
+      if (data["main"]["temp"] <= 80 && data["main"]["temp"] >= 70) {
         $.ajax({
           url: "http://api.giphy.com/v1/gifs/search",
           method: "GET",
@@ -105,7 +110,7 @@ function submitHandleClick() {
           }
         })
       }
-      if (temp.textContent < 90 && temp.textContent > 80) {
+      if (data["main"]["temp"] <= 90 && data["main"]["temp"] >= 80) {
         $.ajax({
           url: "http://api.giphy.com/v1/gifs/search",
           method: "GET",
@@ -123,7 +128,7 @@ function submitHandleClick() {
           }
         })
       }
-      if (temp.textContent > 90) {
+      if (data["main"]["temp"] > 90) {
         $.ajax({
           url: "http://api.giphy.com/v1/gifs/search",
           method: "GET",
@@ -156,21 +161,9 @@ function goBackHandleClick() {
   submitButton.classList.remove('hidden');
   currentTemp.classList.add('hidden');
   temp.classList.add('hidden');
+  feelsLike.classList.add('hidden');
+  feelsTemp.classList.add('hidden');
   gifBox.classList.add('hidden');
   goBackButton.classList.add('hidden');
   text.value = "";
 }
-// $.ajax({
-//   url: "http://api.giphy.com/v1/gifs/search",
-//   method: "GET",
-//   data: {
-//     q: "freezing cold",
-//     "api_key": "1HVmYfFmPXlqbDQcjCutEprNI8I02kIZ"
-//   },
-//   success: function (data) {
-//     console.log("freezing", data);
-//   },
-//   error: function () {
-//     console.error("error")
-//   }
-// })

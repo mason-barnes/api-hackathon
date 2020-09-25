@@ -2,13 +2,22 @@
   box-sizing: border-box;
 }
 body {
-  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-  background-color: rgb(59, 109, 201);
+  background-image: url(./images/73ltcd74njp21.jpg);
+  background-repeat: no-repeat;
+  background-size: 100vw 100vh;
+}
+@media (min-width: 900px) {
+  body {
+    background-image: url(./images/full-size-background.jpg);
+  }
+}
+body, .submit, .go-back {
+  font-family: 'Balsamiq Sans', cursive;
 }
 .header {
   width: 100%;
   height: 150px;
-  background-color: rgb(201, 38, 38);
+  background: linear-gradient(rgb(38, 109, 201), white);
   text-align: center;
   padding-top: 30px;
   border-radius: 10px;
@@ -22,7 +31,7 @@ body {
 }
 .center {
   text-align: center;
-  height: 50px;
+  height: 40px;
 }
 .textbox {
   width: 75%;
@@ -50,9 +59,17 @@ body {
 .pad-left {
   padding-left: 5px;
 }
+.margin-top {
+  margin-top: 200px;
+}
 .gif {
   width: 100%;
   max-width: 300px;
   height: auto;
+  max-height: 200px;
   margin: auto;
+}
+.skyblue {
+  color: rgb(133, 176, 211);
+  text-shadow: 2px 2px 2px black;
 }
