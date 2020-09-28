@@ -25,7 +25,7 @@ goBackButton.addEventListener('click', goBackHandleClick);
 
 function submitHandleClick() {
   $.ajax({
-    url: "http://api.openweathermap.org/data/2.5/weather",
+    url: "https://api.openweathermap.org/data/2.5/weather",
     method: "GET",
     data: {
       q: city.value,
@@ -85,7 +85,7 @@ function submitHandleClick() {
 }
 function freezingCold() {
   $.ajax({
-    url: "http://api.giphy.com/v1/gifs/search",
+    url: "https://api.giphy.com/v1/gifs/search",
     method: "GET",
     data: {
       q: "jim carrey freezing movie",
@@ -103,7 +103,7 @@ function freezingCold() {
 }
 function chillyOutside() {
   $.ajax({
-    url: "http://api.giphy.com/v1/gifs/search",
+    url: "https://api.giphy.com/v1/gifs/search",
     method: "GET",
     data: {
       q: "cold weather",
@@ -121,7 +121,7 @@ function chillyOutside() {
 }
 function coolWeather() {
   $.ajax({
-    url: "http://api.giphy.com/v1/gifs/search",
+    url: "https://api.giphy.com/v1/gifs/search",
     method: "GET",
     data: {
       q: "robert redford agree nod",
@@ -139,7 +139,7 @@ function coolWeather() {
 }
 function greatWeather() {
   $.ajax({
-    url: "http://api.giphy.com/v1/gifs/search",
+    url: "https://api.giphy.com/v1/gifs/search",
     method: "GET",
     data: {
       q: "beautiful day",
@@ -157,7 +157,7 @@ function greatWeather() {
 }
 function hotWeather() {
   $.ajax({
-    url: "http://api.giphy.com/v1/gifs/search",
+    url: "https://api.giphy.com/v1/gifs/search",
     method: "GET",
     data: {
       q: "hot weather",
@@ -175,7 +175,7 @@ function hotWeather() {
 }
 function superHot() {
   $.ajax({
-    url: "http://api.giphy.com/v1/gifs/search",
+    url: "https://api.giphy.com/v1/gifs/search",
     method: "GET",
     data: {
       q: "sweating",
