@@ -4,6 +4,7 @@
 body {
   background-image: url(./images/73ltcd74njp21.jpg);
   background-repeat: no-repeat;
+  background-attachment: fixed;
   background-size: 100vw 100vh;
 }
 @media (min-width: 900px) {
@@ -71,5 +72,5 @@ body, .submit, .go-back {
 }
 .skyblue {
   color: rgb(133, 176, 211);
-  text-shadow: 2px 2px 2px black;
+  text-shadow: 2px 2px 2px black, -2px -2px 2px black, -2px 2px 2px black, 2px -2px 2px black;
 }
