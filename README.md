@@ -1,5 +1,5 @@
 # api-hackathon
-A hackathon project utilizing the data from two public APIs to create an app.
+A hackathon project utilizing the data from two public APIs to create an app. The user will submit a city name, and receive current weather data from that city, along with a GIF that matches the current weather.
 
 ## Technologies Used
 
@@ -7,10 +7,9 @@ A hackathon project utilizing the data from two public APIs to create an app.
 - CSS
 - JavaScript
 - jQuery
-- Google Font
 
 ## Live Demo
-Here is the live link! https://mason-barnes.github.io/api-hackathon/
+Here is the live link! https://github.com/mason-barnes/api-hackathon.git
 
 ## Features
 - The user can input a city name.
