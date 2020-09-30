@@ -4,6 +4,7 @@ var textBox = document.getElementById('textbox');
 var city = document.getElementById('city');
 var enterCity = document.getElementById('enter-city');
 var cityName = document.createElement('h2');
+var cityNameView = document.getElementById('city-name-view');
 var currentTemp = document.getElementById('current-temp');
 var temp = document.getElementById('temp');
 var feelsLike = document.getElementById('feels-like');
@@ -20,10 +21,11 @@ var gifBox = document.getElementById('gif');
 var form = document.getElementById('form');
 var gif = document.createElement('img');
 
-submitButton.addEventListener('click', submitHandleClick);
+form.addEventListener('submit', submitHandleClick);
 goBackButton.addEventListener('click', goBackHandleClick);
 
 function submitHandleClick() {
+  event.preventDefault();
   $.ajax({
     url: "https://api.openweathermap.org/data/2.5/weather",
     method: "GET",
@@ -36,6 +38,8 @@ function submitHandleClick() {
       enterCity.classList.add('hidden');
       city.classList.add('hidden');
       submitButton.classList.add('hidden');
+      form.classList.add('hidden');
+      cityNameView.classList.remove('hidden');
       currentTemp.classList.remove('hidden');
       temp.classList.remove('hidden');
       feelsLike.classList.remove('hidden');
@@ -56,9 +60,8 @@ function submitHandleClick() {
       windNum.textContent = data["wind"]["speed"] + "mph";
       gifBox.classList.remove('hidden');
       goBackButton.classList.remove('hidden');
-      cityName.textContent = city.value;
-      cityName.classList.add('p-grow-30');
-      textBox.append(cityName);
+      cityNameView.textContent = city.value;
+      cityNameView.classList.add('p-grow-30');
       if (data["main"]["temp"] < 32) {
         freezingCold();
       }
@@ -79,7 +82,7 @@ function submitHandleClick() {
       }
     },
     error: function () {
-      console.error("error")
+      alert("Please enter a valid city");
     }
   });
 }
@@ -192,11 +195,12 @@ function superHot() {
   })
 }
 function goBackHandleClick() {
-  cityName.remove();
+  cityNameView.classList.add('hidden');
   gif.remove();
   enterCity.classList.remove('hidden');
   city.classList.remove('hidden');
   submitButton.classList.remove('hidden');
+  form.classList.remove('hidden');
   currentTemp.classList.add('hidden');
   temp.classList.add('hidden');
   feelsLike.classList.add('hidden');
@@ -212,4 +216,5 @@ function goBackHandleClick() {
   gifBox.classList.add('hidden');
   goBackButton.classList.add('hidden');
   city.value = "";
+  cityNameView.textContent = "";
 }
