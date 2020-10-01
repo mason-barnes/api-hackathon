@@ -1,4 +1,4 @@
-# api-hackathon
+# Weather GIF Reaction App
 A hackathon project utilizing the data from two public APIs to create an app. The user will submit a city name, and receive current weather data from that city, along with a GIF that matches the current weather. https://mason-barnes.github.io/api-hackathon/
 
 ## Technologies Used
