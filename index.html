@@ -6,24 +6,31 @@
   <title>API Hackathon</title>
   <link rel="stylesheet" href="./styles.css">
   <link href="https://fonts.googleapis.com/css2?family=Balsamiq+Sans&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+    integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 </head>
 <body>
   <div class="header">
     <header>
-      <p class="p-grow-24"><b>Weather GIF Reaction App</b></p>
+      <h1 class="p-grow-30">Weather GIF Reaction App</h1>
     </header>
   </div>
-  <div id="enter-city" class="center margin-bottom-50 width-100">
-    <h2 class="margin-top skyblue">Enter a city</h2>
+  <div id="enter-city" class="center">
+    <h2 class="skyblue margin-top">Enter a city</h2>
   </div>
-  <div id="textbox" class="center margin-bottom-50 width-100">
-    <input type="text" id="city" class="textbox" name="city" placeholder="Irvine">
-  </div>
-  <div id="submit" class="center width-100">
-    <button type="submit" class="submit p-grow-30" name="submit"><b>Submit</b></button>
+  <form id="form">
+    <div id="textbox" class="center margin-top margin-bottom-50 width-100">
+      <input type="text" id="city" class="textbox" name="city" placeholder="Irvine" required>
+    </div>
+    <div id="submit" class="center width-100">
+      <button type="submit" class="submit p-grow-30" name="submit"><b>Submit</b></button>
+    </div>
+  </form>
+  <div class="center width-100">
+    <h2 id="city-name-view" class="skyblue hidden"></h2>
   </div>
   <div class="flex">
-    <h2 id="current-temp" class="skyblue hidden">Current Temperature:</h2>
+    <h2 id="current-temp" class="skyblue hidden p-grow-24">Current Temperature:</h2>
     <h2 id="temp" class="skyblue pad-left hidden"></h2>
   </div>
   <div class="flex">
@@ -51,6 +58,25 @@
   </div>
   <div id="go-back" class="center width-100 hidden">
     <button type="submit" class="submit p-grow-30" name="go-back"><b>Go Back</b></button>
+  </div>
+  <div class="modal" tabindex="-1" role="dialog">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title">Modal title</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <p>Modal body text goes here.</p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-primary">Save changes</button>
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
   </div>
     <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
     <script src="./main.js"></script>

@@ -20,7 +20,7 @@ body, .submit, .go-back {
   height: 150px;
   background: linear-gradient(rgb(38, 109, 201), white);
   text-align: center;
-  padding-top: 30px;
+  padding-top: 50px;
   border-radius: 10px;
   border: 1px solid black;
 }
@@ -38,6 +38,7 @@ body, .submit, .go-back {
   width: 75%;
   max-width: 300px;
   height: 75%;
+  margin-bottom: 10px;
 }
 .submit {
   background-color: rgb(39, 191, 211);
@@ -46,6 +47,8 @@ body, .submit, .go-back {
   height: 100%;
   border-radius: 10px 10px;
   border: 1px solid black;
+  cursor: pointer;
+  padding-bottom: 40px;
 }
 .width-100 {
   width: 100%;
@@ -61,7 +64,7 @@ body, .submit, .go-back {
   padding-left: 5px;
 }
 .margin-top {
-  margin-top: 200px;
+  margin-top: 10px;
 }
 .gif {
   width: 100%;
@@ -69,6 +72,7 @@ body, .submit, .go-back {
   height: auto;
   max-height: 200px;
   margin: auto;
+  margin-bottom: 10px;
 }
 .skyblue {
   color: rgb(133, 176, 211);
