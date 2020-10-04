@@ -6,8 +6,6 @@
   <title>API Hackathon</title>
   <link rel="stylesheet" href="./styles.css">
   <link href="https://fonts.googleapis.com/css2?family=Balsamiq+Sans&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
-    integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 </head>
 <body>
   <div class="header">
@@ -20,7 +18,7 @@
   </div>
   <form id="form">
     <div id="textbox" class="center margin-top margin-bottom-50 width-100">
-      <input type="text" id="city" class="textbox" name="city" placeholder="Irvine" required>
+      <input type="text" id="city" class="textbox" name="city" placeholder="Irvine" autocomplete="off" required>
     </div>
     <div id="submit" class="center width-100">
       <button type="submit" class="submit p-grow-30" name="submit"><b>Submit</b></button>
@@ -59,26 +57,15 @@
   <div id="go-back" class="center width-100 hidden">
     <button type="submit" class="submit p-grow-30" name="go-back"><b>Go Back</b></button>
   </div>
-  <div class="modal" tabindex="-1" role="dialog">
-    <div class="modal-dialog" role="document">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h5 class="modal-title">Modal title</h5>
-          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-            <span aria-hidden="true">&times;</span>
-          </button>
-        </div>
-        <div class="modal-body">
-          <p>Modal body text goes here.</p>
-        </div>
-        <div class="modal-footer">
-          <button type="button" class="btn btn-primary">Save changes</button>
-          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-        </div>
+  <div id="modal" class="hidden">
+    <div class="modal-overlay">
+      <div class="modal-content" id="modal-content">
+        <h2>Please Enter A Valid City!</h2>
+        <button id="close-button" type="button" class="close p-grow-30" name="close-button">Close</button>
       </div>
     </div>
   </div>
-    <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+  <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
     <script src="./main.js"></script>
 </body>
 </html>

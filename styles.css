@@ -12,7 +12,7 @@ body {
     background-image: url(./images/full-size-background.jpg);
   }
 }
-body, .submit, .go-back {
+body, .submit, .go-back, .close {
   font-family: 'Balsamiq Sans', cursive;
 }
 .header {
@@ -20,7 +20,7 @@ body, .submit, .go-back {
   height: 150px;
   background: linear-gradient(rgb(38, 109, 201), white);
   text-align: center;
-  padding-top: 50px;
+  padding-top: 30px;
   border-radius: 10px;
   border: 1px solid black;
 }
@@ -50,6 +50,15 @@ body, .submit, .go-back {
   cursor: pointer;
   padding-bottom: 40px;
 }
+.close {
+  background-color: rgb(39, 191, 211);
+  width: 75%;
+  max-width: 300px;
+  height: 100%;
+  border-radius: 10px 10px;
+  border: 1px solid black;
+  cursor: pointer;
+}
 .width-100 {
   width: 100%;
 }
@@ -77,4 +86,21 @@ body, .submit, .go-back {
 .skyblue {
   color: rgb(133, 176, 211);
   text-shadow: 2px 2px 2px black, -2px -2px 2px black, -2px 2px 2px black, 2px -2px 2px black;
+}
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  width: 100%;
+}
+
+.modal-content {
+  background-color: rgb(160, 173, 201);
+  border: 5px solid rgb(218, 32, 32);
+  width: 90%;
+  border-radius: 15px;
+  text-align: center;
 }
