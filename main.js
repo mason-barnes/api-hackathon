@@ -1,5 +1,6 @@
 var submitButton = document.getElementById('submit');
 var goBackButton = document.getElementById('go-back');
+var closeButton = document.getElementById('close-button');
 var textBox = document.getElementById('textbox');
 var city = document.getElementById('city');
 var enterCity = document.getElementById('enter-city');
@@ -19,10 +20,13 @@ var wind = document.getElementById('wind');
 var windNum = document.getElementById('wind-num');
 var gifBox = document.getElementById('gif');
 var form = document.getElementById('form');
+var modal = document.getElementById('modal');
 var gif = document.createElement('img');
 
 form.addEventListener('submit', submitHandleClick);
 goBackButton.addEventListener('click', goBackHandleClick);
+closeButton.addEventListener('click', closeHandleClick);
+
 
 function submitHandleClick() {
   event.preventDefault();
@@ -82,7 +86,8 @@ function submitHandleClick() {
       }
     },
     error: function () {
-      alert("Please enter a valid city");
+      modal.classList.remove('hidden');
+      console.log(modal);
     }
   });
 }
@@ -217,4 +222,9 @@ function goBackHandleClick() {
   goBackButton.classList.add('hidden');
   city.value = "";
   cityNameView.textContent = "";
+}
+
+function closeHandleClick() {
+  modal.classList.add('hidden');
+  city.value = "";
 }
