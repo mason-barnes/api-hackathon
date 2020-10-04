@@ -87,7 +87,6 @@ function submitHandleClick() {
     },
     error: function () {
       modal.classList.remove('hidden');
-      console.log(modal);
     }
   });
 }
